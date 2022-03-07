@@ -34,6 +34,14 @@ function RenderItem({ name, salary, id, navigation }) {
       'hello',
       ` name:${customer.name} and salary:${customer.salary}`
     );
+     navigation.reset({
+      index: 0,
+      routes: [
+        {
+          name: 'MainScreen',
+        }
+      ]
+    });
   };
   const handlePress = (id) => {
     const customer = Customer.find((cust) => {
